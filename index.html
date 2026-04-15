@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>audio</title>
 
   <style>
@@ -9,7 +10,7 @@
       font-family: "Hiragino Maru Gothic ProN", "Segoe UI", sans-serif;
       background: linear-gradient(135deg, #fff9c4, #e1bee7);
       margin: 0;
-      padding: 20px;
+      padding: 15px;
     }
 
     .container {
@@ -17,7 +18,7 @@
       margin: auto;
       background: white;
       border-radius: 20px;
-      padding: 25px;
+      padding: 20px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
 
@@ -25,50 +26,74 @@
       text-align: center;
       color: #8e24aa;
       margin-bottom: 20px;
+      font-size: 20px;
     }
 
     .audio-box {
       background: #fffde7;
       border-left: 6px solid #ce93d8;
-      padding: 15px;
+      padding: 12px;
       border-radius: 12px;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
+      transition: transform 0.15s;
+    }
+
+    .audio-box:active {
+      transform: scale(0.98);
     }
 
     p {
-      margin: 0 0 10px;
+      margin: 0 0 8px;
       color: #6a1b9a;
       font-weight: bold;
+      font-size: 14px;
     }
 
     audio {
       width: 100%;
     }
-  </style>
 
+    /* スマホ最適化 */
+    @media (max-width: 480px) {
+      .container {
+        padding: 15px;
+        border-radius: 15px;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 13px;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <div class="container">
-    <h2>一覧</h2>
+    <h2>音声一覧</h2>
 
     <div class="audio-box">
-    <p>① 「え？あぁ、そう。」-非日常談話・怪奇七篇</p>
-  <audio controls>
-    <source src="eaasou.mp3" type="audio/mpeg">
-  </audio>
+      <p>「え？あぁ、そう。」- 非日常談話・怪奇七篇</p>
+      <audio controls>
+        <source src="eaasou.mp3" type="audio/mpeg">
+      </audio>
+    </div>
 
-  <p>② 「プリンセスに口づけを」Toni9ht購入特典</p>
-  <audio controls>
-    <source src="princess.m4a" type="audio/mp4">
-  </audio>
+    <div class="audio-box">
+      <p>「プリンセスに口づけを」 Toni9ht購入特典</p>
+      <audio controls>
+        <source src="princess.m4a" type="audio/mp4">
+      </audio>
+    </div>
 
-  <p>③ 「Trip-Trap,Love Trap!!」L∞VE購入特典</p>
-  <audio controls>
-    <source src="TripTrapLoveTrap.m4a" type="audio/mpeg">
-  </audio>
-  
-  
+    <div class="audio-box">
+      <p>「Trip-Trap, Love Trap!!」 L∞VE購入特典</p>
+      <audio controls>
+        <source src="TripTrapLoveTrap.m4a" type="audio/mp4">
+      </audio>
     </div>
 
   </div>
